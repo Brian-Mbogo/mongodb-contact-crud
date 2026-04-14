@@ -1,32 +1,36 @@
 # MongoDB Contact CRUD (Checkpoint)
 
-You’re doing a simple CRUD practice with MongoDB:
+Goal (exact):
+- Database name: `contact`
+- Collection name: `contactlist`
+- Insert 5 documents, then run the required CRUD queries
+- Save 10 screenshots in `screenshots/` with the exact filenames
 
-- Database: `contact`
-- Collection: `contactlist`
-- Documents: 5 contacts (given in the checkpoint)
-- Then: find / filter / update / delete, and save screenshots as proof.
-
-If you follow the steps below **one by one**, you’ll get all the required screenshots in order.
-
----
-
-## 1) Start MongoDB
-
-Make sure MongoDB is running first.
-
-- If you installed MongoDB as a service on Windows, it may already be running.
-- Otherwise, start it in a terminal:
-  - `mongod`
-
-Then open Mongo shell:
-- `mongosh`
+Follow these steps exactly, in order.
 
 ---
 
-## 2) Run the commands + take screenshots (recommended)
+## Step 1 — Start MongoDB + open `mongosh`
 
-After each step, take a screenshot and save it into `screenshots/` with the exact filename shown.
+Open two terminals:
+
+Terminal 1 (keeps MongoDB running):
+```
+mongod
+```
+
+Terminal 2 (Mongo shell):
+```
+mongosh
+```
+
+---
+
+## Step 2 — Run commands and save screenshots (01 -> 10)
+
+After every command, take a screenshot and save it into `screenshots/` with the exact filename shown.
+
+Windows screenshot shortcut: `Win + Shift + S` (then save the image with the required name).
 
 ### 01 — Select the database
 Command:
@@ -87,7 +91,7 @@ db.contactlist.find({
 ```
 Save screenshot as: `screenshots/07-regex-query.png`
 
-Note: with the provided data, this query can return an empty result. That’s OK — the goal is to show the correct query.
+With the provided data, this query returns an empty result (`[]`). That is correct for this dataset.
 
 ### 08 — Update: change "Kefi Seif" to "Kefi Anis"
 Command:
@@ -117,16 +121,18 @@ Save screenshot as: `screenshots/10-final.png`
 
 ## 3) Replace placeholders (important)
 
-The PNGs currently inside `screenshots/` were placeholders so the folder existed in GitHub.
-You must overwrite them with your real screenshots.
+The PNGs currently inside `screenshots/` are placeholders. Overwrite them with your real screenshots.
 
-Quick check: real screenshots should be **much larger** than ~68 bytes.
+Quick check (real screenshots are much larger than ~68 bytes):
+```
+dir screenshots\*.png
+```
 
 ---
 
 ## 4) Push your real screenshots to GitHub
 
-After you replace the images:
+After you replace the images, run:
 ```
 git add screenshots/*.png
 git commit -m "Add CRUD screenshots"
@@ -135,9 +141,9 @@ git push
 
 ---
 
-## Optional: run the Node script
+## Run the Node script (optional)
 
-This repo also includes `contact.js` which runs the same operations and prints results in the terminal:
+This repo includes `contact.js` which runs the same operations and prints results in the terminal:
 ```
 npm install
 node contact.js
