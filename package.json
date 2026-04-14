@@ -1,0 +1,16 @@
+{
+  "name": "mongodb-contact-crud",
+  "version": "1.0.0",
+  "description": "1. Ensure MongoDB is running locally (`mongod`).\r 2. In project root:\r    ```\r    npm init -y\r    npm install mongodb\r    ```\r 3. Run: `node contact.js`",
+  "main": "contact.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "mongodb": "^7.1.1"
+  }
+}
